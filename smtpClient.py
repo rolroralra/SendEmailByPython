@@ -2,6 +2,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import smtplib
 
+
 class SmtpClient:
     # SMTP 접속을 위한 서버, 계정 설정
     SMTP_SERVER = "smtp.gmail.com"
@@ -20,7 +21,6 @@ class SmtpClient:
         self.SMTP_PORT = int(smtp_server_config['PORT'])
         self.SMTP_USER = smtp_server_config['USER_ID']
         self.SMTP_PASSWORD = smtp_server_config['PASSWORD']
-
 
     # 이메일 유효성 검사 함수
     def is_valid(self, addr):
